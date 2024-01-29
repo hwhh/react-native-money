@@ -1,18 +1,39 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 
+buildscript {
+    if (project == rootProject) {
+        repositories {
+            google()
+            mavenCentral()
+        }
+        dependencies {
+            classpath("com.android.tools.build:gradle:8.2.2")
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+        }
+    }
+    ext {
+        kotlinVersion = '1.9.22'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
 android {
+    def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
+    if (agpVersion.tokenize('.')[0].toInteger() >= 7) {
+        namespace "com.fouppy.RNMoneyInput"
+    }
+
     compileSdkVersion safeExtGet('compileSdkVersion', 30)
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 20)
         targetSdkVersion safeExtGet('targetSdkVersion', 30)
         versionCode 1
-        versionName "1.0.10"
+        versionName "1.0.11"
     }
 
     buildTypes {
@@ -28,36 +49,24 @@ android {
     buildFeatures {
         viewBinding true
     }
-
-    namespace "com.fouppy.RNMoneyInput"
-}
-
-buildscript {
-    ext {
-        kotlinVersion = '1.6.20'
-    }
-    repositories {
-        jcenter()
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20"
-    }
 }
 
 repositories {
     jcenter()
-    google()
+    mavenLocal()
     mavenCentral()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
     }
+    maven {
+        // Android JSC is installed from npm
+        url "$rootDir/../node_modules/jsc-android/dist"
+    }
+    google()
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.20"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
 }
