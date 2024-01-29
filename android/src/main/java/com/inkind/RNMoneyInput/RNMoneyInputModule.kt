@@ -2,7 +2,7 @@ package com.inkind.RNMoneyInput
 
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
+//import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
@@ -13,7 +13,7 @@ import java.lang.ref.WeakReference
 import java.text.DecimalFormatSymbols
 import java.text.NumberFormat
 import java.util.*
-import kotlin.math.max
+//import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow
 
@@ -62,8 +62,8 @@ internal class MoneyTextListener(
     }
 
     override fun onTextChanged(text: CharSequence, cursorPosition: Int, before: Int, count: Int) {
-        val newText = text.substring(cursorPosition, cursorPosition + count)
-        val oldText = previousText?.substring(cursorPosition, cursorPosition + before)
+        // val newText = text.substring(cursorPosition, cursorPosition + count)
+        // val oldText = previousText?.substring(cursorPosition, cursorPosition + before)
         super.onTextChanged(text, cursorPosition, before, count)
     }
 
@@ -268,7 +268,7 @@ open class MoneyTextWatcher(
         fun installOn(
                 editText: EditText,
                 locale: String? = null,
-                listener: TextWatcher? = null,
+                // listener: TextWatcher? = null,
         ): MoneyTextWatcher {
             val maskedListener = MoneyTextWatcher(
                     editText,
