@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "prepare": "npx tsc",
-    "postinstall": "yarn prepare",
+    "postinstall": "npm run prepare",
     "format": "prettier --write ./index.tsx"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInputProps } from 'react-native';
-export declare const initializeMoneyInput: (reactNode: Number, options: any) => void, extractValue: (label: string, locale?: string) => number, formatMoney: (value: Number, locale?: string) => string;
+export declare const initializeMoneyInput: (reactNode: Number, options: any) => void, extractValue: (label: string, locale?: string | undefined) => number, formatMoney: (value: Number, locale?: string | undefined) => string;
 interface Handles {
     focus: () => void;
     blur: () => void;
