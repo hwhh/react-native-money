@@ -1,5 +1,5 @@
 @rem
-@rem Copyright (c) 2022 inKind Cards, Inc
+@rem Copyright (c) 2024 Fred Honoré
 @rem
 @rem Licensed under the Apache License, Version 2.0 (the "License");
 @rem you may not use this file except in compliance with the License.

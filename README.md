@@ -18,7 +18,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/fouppy/react-native-money">
+  <a href="https://github.com/Fouppy/react-native-money">
     <img src="logo.png" alt="Logo" width="160px">
   </a>
 
@@ -28,9 +28,9 @@
     <br /><br />
     <a href="https://www.npmjs.com/package/@fouppy/react-native-money">View Library</a>
     ·
-    <a href="https://github.com/fouppy/react-native-money/issues">Report Bug</a>
+    <a href="https://github.com/Fouppy/react-native-money/issues">Report Bug</a>
     ·
-    <a href="https://github.com/fouppy/react-native-money/issues">Request Feature</a>
+    <a href="https://github.com/Fouppy/react-native-money/issues">Request Feature</a>
   </p>
 </div>
 
@@ -43,7 +43,13 @@ with React Native, The only difference is that the `value` prop accepts a `Numbe
 <br />
 
 ```
-npm install @fouppy/react-native-money
+npm install --save @fouppy/react-native-money
+```
+
+or
+
+```
+yarn add @fouppy/react-native-money
 ```
 
 ### iOS Installation:
@@ -53,33 +59,6 @@ Make sure to add the following to your `Podfile` before running `npx pod-install
 ```
 pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text', :modular_headers => true
 ```
-
-## Manual Installation
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-money` and add `RNMoneyInput.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNMoneyInput.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-
-- Add `import com.inkind.RNMoneyInput.RNMoneyInputPackage;` to the imports at the top of the file
-- Add `new RNMoneyInputPackage()` to the list returned by the `getPackages()` method
-
-2. Append the following lines to `android/settings.gradle`:
-   ```
-   include ':inkindcards_react-native-money'
-   project(':inkindcards_react-native-money').projectDir = new File(rootProject.projectDir, 	'../node_modules/@fouppy/react-native-money/android')
-   ```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-`
-    compile project(':react-native-money')
-  	`
-</details>
 
 ## Usage
 
@@ -115,7 +94,7 @@ Make sure to [mock](https://jestjs.io/docs/en/manual-mocks#mocking-node-modules)
 ```javascript
 jest.mock('react-native-money', () => ({
   default: jest.fn(),
-}))
+}));
 ```
 
 ## Inspiration
@@ -133,13 +112,13 @@ This means that releases within the same MAJOR version are always backwards comp
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/fouppy/react-native-money.svg?style=for-the-badge
-[contributors-url]: https://github.com/fouppy/react-native-money/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fouppy/react-native-money.svg?style=for-the-badge
-[forks-url]: https://github.com/fouppy/react-native-money/network/members
-[stars-shield]: https://img.shields.io/github/stars/fouppy/react-native-money.svg?style=for-the-badge
-[stars-url]: https://github.com/fouppy/react-native-money/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fouppy/react-native-money.svg?style=for-the-badge
-[issues-url]: https://github.com/fouppy/react-native-money/issues
-[license-shield]: https://img.shields.io/github/license/fouppy/react-native-money.svg?style=for-the-badge
-[license-url]: https://github.com/fouppy/react-native-money/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/Fouppy/react-native-money.svg?style=for-the-badge
+[contributors-url]: https://github.com/Fouppy/react-native-money/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Fouppy/react-native-money.svg?style=for-the-badge
+[forks-url]: https://github.com/Fouppy/react-native-money/network/members
+[stars-shield]: https://img.shields.io/github/stars/Fouppy/react-native-money.svg?style=for-the-badge
+[stars-url]: https://github.com/Fouppy/react-native-money/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Fouppy/react-native-money.svg?style=for-the-badge
+[issues-url]: https://github.com/Fouppy/react-native-money/issues
+[license-shield]: https://img.shields.io/github/license/Fouppy/react-native-money.svg?style=for-the-badge
+[license-url]: https://github.com/Fouppy/react-native-money/blob/master/LICENSE

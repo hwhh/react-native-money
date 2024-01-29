@@ -29,7 +29,7 @@ android {
         viewBinding true
     }
 
-    namespace "com.inkind.RNMoneyInput"
+    namespace "com.fouppy.RNMoneyInput"
 }
 
 buildscript {

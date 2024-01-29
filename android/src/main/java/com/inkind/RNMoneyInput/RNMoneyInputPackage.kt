@@ -1,4 +1,4 @@
-package com.inkind.RNMoneyInput
+package com.fouppy.RNMoneyInput
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.JavaScriptModule
