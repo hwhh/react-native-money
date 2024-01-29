@@ -277,6 +277,7 @@
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React-Core/**",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -304,6 +305,7 @@
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React-Core/**",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
