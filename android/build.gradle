@@ -33,7 +33,7 @@ android {
         minSdkVersion safeExtGet('minSdkVersion', 20)
         targetSdkVersion safeExtGet('targetSdkVersion', 30)
         versionCode 1
-        versionName "1.0.11"
+        versionName "1.0.12"
     }
 
     buildTypes {
