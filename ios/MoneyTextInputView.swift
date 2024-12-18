@@ -40,6 +40,7 @@ class MoneyTextInputView: RCTBaseTextInputView {
         maskedDelegate?.listener = listener
 
         // Assign the masked delegate to the text field
+        textView.delegate = nil
         textView.delegate = maskedDelegate
     }
 }

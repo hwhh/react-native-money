@@ -1,9 +1,9 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState, } from 'react';
 
-import { findNodeHandle, NativeModules, TextInput, TextInputProps, } from 'react-native';
+import { requireNativeComponent, TextInput, TextInputProps, } from 'react-native';
 
-const {RNMoneyInput} = NativeModules as { RNMoneyInput: NativeExports };
 
+const RNMoneyInput = requireNativeComponent('MoneyTextInputView');
 
 if (!RNMoneyInput) {
     throw new Error(`NativeModule: RNMoneyInput is null.
@@ -14,11 +14,6 @@ To fix this issue try these steps:
 `);
 }
 
-type NativeExports = {
-    // initializeMoneyInput: (reactNode: Number, options: any) => void;
-    // formatMoney: (value: Number, locale?: string) => string;
-    // extractValue: (label: string, locale?: string) => number;
-};
 
 type MoneyInputProps = TextInputProps & {
     value?: number;
@@ -59,8 +54,6 @@ const MoneyInput = forwardRef<Handles, MoneyInputProps>(
         const input = useRef<TextInput>(null);
         const [rawValue, setValue] = useState<number | undefined>(defaultMoney);
         const [label, setLabel] = useState<string>(defaultLabel);
-
-       
 
         // Keep numeric prop in sync with out state
         useEffect(() => {
